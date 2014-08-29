@@ -66,7 +66,20 @@ def caesar_shift(s):
     print count        
 
 
-            
+# Binary float
+# Given a binary string containing a fractional part your task is to print to the standard output (stdout) its numeric value (as a float).            
+def print_float(s):
+    # Write your code here
+    # To print results to the standard output you can use print
+    # Example: print "Hello world!"
+    n = s.index(".") # number of positions before the decimal point
+    r = 0 # result
+    for digit in s.replace(".", ""): 
+        # iterate through each digit ommiting the point '.'
+        r += int(digit) * 2 ** (n-1) 
+        # multiplicate the digit by the respective power of 2
+        n -= 1
 
+    print r # 4.1875
 
      
