@@ -45,4 +45,28 @@ def caesar_shift(s):
     stringer = stringer.replace("!"," ")
     stringer = stringer.replace("{","A")    
     print stringer
+
+# Count ones
+# Given an integer N
+# Your task is to
+# write a function that prints to the standard output (stdout) the number of 1's present in its binary representation
+
+    def count_one(a):
+    # Write your code here
+    # To print results to the standard output you can use print
+    # Example: print "Hello world!"
+    s=''
+    count = 0
+    while(a):
+        s = str(a%2) + s
+        a = a/2
+    for i in s:
+        if i == '1':
+            count+=1
+    print count        
+
+
+            
+
+
      
