@@ -41,3 +41,46 @@ def odd_square_sum(x, y):
 
 odd_square_sum(1, 10)    
 
+
+# Sqrt
+# Given an integer number N, compute its square root without using any math library functions and print the result to standard output. Please round the result downwards to the nearest integer (e.g both 7.1 and 7.9 are rounded to 7)
+# Expected complexity: O(logN), O(1)
+
+def compute_sqrt(n):
+    # Write your code here
+    # To print results to the standard output you can use print
+    # Example: print "Hello world!"
+    x = n
+    y = (x + 1) // 2
+    while y < x:
+        x = y
+        y = (x + n // x) // 2
+    print x
+
+
+#Another Solution to compute_sqrt
+
+def compute_sqrt(n):
+    i = 0
+    while i * i < n-1:
+        i+=1
+    print (i)
+
+# Longest palindrome
+# Given a string S, find the longest substring in S that is the same in reverse and print it to the standard output. 
+
+def longest_palind(s):
+    # Write your code here
+    # To print results to the standard output you can use print
+    # Example: print "Hello world!"
+    s = s.lower()
+    results = []
+
+    for i in range(len(s)):
+        for j in range(0, i):
+            chunk = s[j:i + 1]
+
+            if chunk == chunk[::-1]:
+                results.append(chunk)
+    print max(results, key=len)             
+       
