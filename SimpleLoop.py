@@ -25,4 +25,18 @@ def fizzbuzz(n):
         print i
 
 
-    
+    #Count Digits
+
+    def count_digits(s):
+    # Write your code here
+    # To print results to the standard output you can use print
+    # Example: print "Hello world!"
+    	print sum(1 for i in s if i in "123456789")
+
+def reverse_string(s):
+	a = len(s)
+	m = ""
+	while (a==0):
+		m += s(a-1)
+	print m
+reverse_string("Setareh")		    	

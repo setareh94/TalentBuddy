@@ -82,4 +82,10 @@ def print_float(s):
 
     print r # 4.1875
 
+
+# Precision
+# Sometimes you want to do calculations maintaining precision. For example, if you have 95% and 5% of a given number, those numbers should add back to the original despite any rounding that needs to occur.
+def precision(p1, p2, v):
+    a = int(round(p1 * v))
+    print a, v - a
      
