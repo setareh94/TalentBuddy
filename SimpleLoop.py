@@ -33,10 +33,11 @@ def fizzbuzz(n):
     # Example: print "Hello world!"
     	print sum(1 for i in s if i in "123456789")
 
-def reverse_string(s):
-	a = len(s)
-	m = ""
-	while (a==0):
-		m += s(a-1)
-	print m
-reverse_string("Setareh")		    	
+
+
+#oddSquare
+def odd_square_sum(x, y):
+    print sum(x ** 2 for x in range(x, y + 1) if x % 2 == 1)
+
+odd_square_sum(1, 10)    
+
