@@ -75,7 +75,6 @@ def longest_palind(s):
     # Example: print "Hello world!"
     s = s.lower()
     results = []
-
     for i in range(len(s)):
         for j in range(0, i):
             chunk = s[j:i + 1]
