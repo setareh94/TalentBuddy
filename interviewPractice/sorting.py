@@ -75,4 +75,21 @@ def majority(v):
     if cnt > len(v) / 2:
         print sol
     else:
-        print 'None'                
+        print 'None' 
+
+
+# Given an array of unsorted but unique integers, your task is to print the n-th largest value.
+ def nth_number(v, n):
+    #print v, n
+    import random
+    r = random.Random()
+    pivot = v[r.randint(0, len(v)-1)]
+    less = [x for x in v if x < pivot]
+    greater = [x for x in v if x > pivot]
+    m = len(greater)
+    if m == n-1:
+        print pivot
+    elif m >= n:
+        nth_number(greater, n)
+    else:
+        nth_number(less, n-m-1)                      
